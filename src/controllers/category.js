@@ -20,6 +20,7 @@ createCategory = async (req, res) => {
 	}
 };
 
+// Could have used graphlookup to perform read based on the level of the category required.
 readCategories = async (req, res) => {
 	try {
 		const category = await Category.find({

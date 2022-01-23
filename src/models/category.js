@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const getColor = require("../utils/color");
+// const getColor = require("../utils/color");
 
 const CategorySchema = new mongoose.Schema(
 	{
@@ -42,13 +42,15 @@ const CategorySchema = new mongoose.Schema(
 	}
 );
 
+// Could have used pre and post inbuilt methods to calculate and update the percentage and color on updates
 // // Pre and Post Check
 // CategorySchema.pre("save", function (next) {
 // 	let category = this;
 // 	// if (!this.isModified("current_target") || this.isModified("total_target")) {
 // 	// 	return next();
 // 	// }
-
+// this.percentage = (this.current_target / this.total_target) * 100;
+// this.color = getColor(this.percentage);
 // 	next();
 // });
 
